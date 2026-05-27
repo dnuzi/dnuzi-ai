@@ -1,0 +1,7 @@
+.github/
+node_modules/
+*.log
+.env
+coverage/
+scripts/
+src/
