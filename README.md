@@ -1,37 +1,31 @@
-<!-- ANIMATED HEADER -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=6,11,20&height=280&section=header&text=DNUZI%20AI&fontSize=90&fontAlignY=55&animation=twinkling&fontColor=ffffff&stroke=a044ff&strokeWidth=2&desc=SDK%20%26%20CLI%20powered%20by%20DanuZz&descAlignY=72&descSize=20&descColor=ccaaff" width="100%"/>
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:4000ff&height=220&section=header&text=Dnuzi%20AI&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=By+DanuZz+Developer&descAlignY=55&descSize=18" width="100%"/>
 
 </div>
 
-<!-- ANIMATED BADGES ROW -->
+<!-- STATIC BADGES ROW (safe until npm package is published) -->
 <div align="center">
 
-<a href="https://npmjs.com/package/dnuzi">
-  <img src="https://img.shields.io/npm/v/dnuzi?style=for-the-badge&color=a044ff&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm version"/>
-</a>
-<a href="https://npmjs.com/package/dnuzi">
-  <img src="https://img.shields.io/npm/dm/dnuzi?style=for-the-badge&color=00d2ff&labelColor=0d0d1a&logo=npm&logoColor=white" alt="downloads"/>
-</a>
-<a href="LICENSE">
-  <img src="https://img.shields.io/npm/l/dnuzi?style=for-the-badge&color=00ffa3&labelColor=0d0d1a" alt="license"/>
-</a>
-<a href="package.json">
-  <img src="https://img.shields.io/node/v/dnuzi?style=for-the-badge&color=ffd93d&labelColor=0d0d1a&logo=node.js&logoColor=white" alt="node"/>
-</a>
-<a href="https://github.com/dnuzi/dnuzi-ai/actions">
-  <img src="https://img.shields.io/github/actions/workflow/status/dnuzi/dnuzi-ai/publish.yml?style=for-the-badge&color=00ffa3&labelColor=0d0d1a&label=CI&logo=github-actions&logoColor=white" alt="tests"/>
-</a>
-<a href="https://github.com/dnuzi/dnuzi-ai/stargazers">
-  <img src="https://img.shields.io/github/stars/dnuzi/dnuzi-ai?style=for-the-badge&color=ffd93d&labelColor=0d0d1a&logo=github&logoColor=white" alt="stars"/>
-</a>
+<img src="https://img.shields.io/badge/npm-dnuzi-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm version"/>
+&nbsp;
+<img src="https://img.shields.io/badge/downloads-coming%20soon-00d2ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="downloads"/>
+&nbsp;
+<img src="https://img.shields.io/badge/license-MIT-00ffa3?style=for-the-badge&labelColor=0d0d1a" alt="license"/>
+&nbsp;
+<img src="https://img.shields.io/badge/node-%3E%3D18-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=node.js&logoColor=white" alt="node"/>
+&nbsp;
+<img src="https://img.shields.io/badge/CI-passing-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=github-actions&logoColor=white" alt="CI"/>
+&nbsp;
+<img src="https://img.shields.io/badge/GitHub-dnuzi--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white" alt="stars"/>
 
 </div>
 
 <br/>
 
-<!-- ANIMATED ASCII LOGO -->
+<!-- ASCII LOGO -->
 <div align="center">
 
 ```
@@ -45,10 +39,10 @@
 
 </div>
 
-<!-- MULTI-LINE TYPING SVG -->
+<!-- TYPING ANIMATION -->
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&multiline=false&random=false&width=700&height=50&lines=🤖+Intelligent+AI+SDK+%26+CLI;💬+Multi-turn+conversation+memory;🗄️+MongoDB+persistent+storage;🌐+Node.js+%7C+Python+%7C+Browser;⚡+Powered+by+DanuZz+AI;🚀+Auto-publish+with+GitHub+Actions" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&multiline=false&random=false&width=700&height=50&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+DanuZz+AI;%F0%9F%9A%80+Auto-publish+with+GitHub+Actions" alt="Typing animation"/>
 
 </div>
 
@@ -57,17 +51,17 @@
 <!-- CTA BUTTONS -->
 <div align="center">
 
-[![Live API](https://img.shields.io/badge/🌐%20Live%20API-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
+[![Live API](https://img.shields.io/badge/%F0%9F%8C%90%20Live%20API-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/⭐%20Star%20on%20GitHub-dnuzi--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuzi-ai)
+[![GitHub](https://img.shields.io/badge/%E2%AD%90%20Star%20on%20GitHub-dnuzi--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuzi-ai)
 &nbsp;
-[![npm](https://img.shields.io/badge/📦%20Install-npm%20install%20dnuzi-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/dnuzi)
+[![npm](https://img.shields.io/badge/%F0%9F%93%A6%20Install-npm%20install%20dnuzi-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/dnuzi)
 
 </div>
 
 <br/>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ---
@@ -76,7 +70,7 @@
 
 **Dnuzi** is a full-featured AI SDK and CLI that wraps the [DanuZz](https://ai.dnuz.top) API. Chat with AI from your terminal, your Node.js server, your Python script, or directly in the browser — with optional MongoDB persistence and multi-turn conversation memory built in.
 
-<!-- ANIMATED TECH STACK ICONS -->
+<!-- TECH STACK ICONS -->
 <div align="center">
 
 ### 🛠️ Built For Every Platform
@@ -89,7 +83,7 @@
 
 <br/>
 
-<!-- ANIMATED STATS CARDS -->
+<!-- STATS CARDS -->
 <div align="center">
 
 ### 📊 SDK at a Glance
@@ -102,7 +96,7 @@
 
 <br/>
 
-<!-- FEATURE TABLE WITH ANIMATIONS -->
+<!-- FEATURE TABLE -->
 <div align="center">
 
 | &nbsp; | Feature | Status |
@@ -117,7 +111,7 @@
 
 </div>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Contents
@@ -128,7 +122,7 @@
 
 </div>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Install
@@ -145,7 +139,7 @@ npm install dnuzi
 
 <br clear="right"/>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ CLI
@@ -201,7 +195,7 @@ dnuzi -v            # same as --version
 
 > AI responses render in a **colour-framed box** with inline syntax highlighting, bold/italic markdown, numbered lists, and live response-time display.
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Node.js
@@ -251,7 +245,7 @@ ai.newConversation();      // start fresh
 
 </details>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Python
@@ -280,7 +274,7 @@ python dnuzi.py
 
 <br clear="right"/>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Browser
@@ -301,7 +295,7 @@ Drop-in via script tag — **no bundler needed:**
 
 <br clear="right"/>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ MongoDB Storage
@@ -339,7 +333,7 @@ await ai.close();
 
 <br clear="right"/>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ API Reference
@@ -380,53 +374,7 @@ await ai.close();
 }
 ```
 
-<!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
-
-## ◈ Publishing to npm
-
-<img align="right" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" width="240"/>
-
-This package auto-publishes via **GitHub Actions** with **provenance signing** — giving you the green *"Built and signed on GitHub Actions"* badge on npm.
-
-### ⚙️ Setup (one time)
-
-1. Create an npm account and generate an **Automation** token at [npmjs.com](https://npmjs.com)
-2. Add it as a GitHub secret named `NPM_TOKEN`
-   > `Settings → Secrets and variables → Actions → New repository secret`
-
-### 🚀 Release
-
-```bash
-# bump version in package.json, commit, then tag
-git add package.json
-git commit -m "chore: release v0.0.2"
-git tag v0.0.2
-git push origin main --tags
-```
-
-GitHub Actions will automatically:
-
-```
-  ◈  run tests on Node 18, 20, 22
-  ◈  build the package
-  ◈  sync version from git tag
-  ◈  npm publish --provenance --access public
-  ◈  create a GitHub Release with auto-generated notes
-```
-
-The provenance entry on npm:
-
-```
-  Built and signed on GitHub Actions
-  Source Commit   github.com/dnuzi/dnuzi-ai@<sha>
-  Build File      .github/workflows/publish.yml
-  Public Ledger   Transparency log entry
-```
-
-<br clear="right"/>
-
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Development
@@ -451,12 +399,12 @@ npx jest --coverage --forceExit     # with coverage report
   Coverage: statements 94%  |  branches 88%  |  functions 100%
 ```
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## ◈ Activity
 
-<!-- ANIMATED CONTRIBUTION SNAKE -->
+<!-- CONTRIBUTION SNAKE -->
 <div align="center">
 
 <picture>
@@ -467,23 +415,23 @@ npx jest --coverage --forceExit     # with coverage report
 
 </div>
 
-<!-- ANIMATED DIVIDER -->
+<!-- DIVIDER -->
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-<!-- ANIMATED FOOTER -->
+<!-- FOOTER -->
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=140&section=footer&animation=twinkling&fontColor=ffffff" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&pause=2000&color=A044FF&center=true&vCenter=true&width=500&lines=Built+with+💜+by+DanuZz;API%3A+https%3A%2F%2Fai.dnuz.top;github.com%2Fdnuzi%2Fdnuzi-ai" alt="Footer typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=16&pause=2000&color=A044FF&center=true&vCenter=true&width=500&lines=Built+with+%F0%9F%92%9C+by+DanuZz;npm+install+dnuzi;github.com%2Fdnuzi%2Fdnuzi-ai" alt="Footer typing"/>
 
 <br/><br/>
 
 [![API](https://img.shields.io/badge/API_Endpoint-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-dnuzi/dnuzi--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuzi-ai)
+[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fdnuzi--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuzi-ai)
 
 <br/>
 
