@@ -24,6 +24,9 @@
     "cli",
     "chatbot",
     "danuZz",
+    "developer-tools",
+    "terminal",
+    "agentic",
     "assistant"
   ],
   "author": "DanuZz (@dnuzi)",
@@ -57,7 +60,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/dnuzi"
+    "url": "https://github.com/dnuzi/dnuzi-ai"
   },
   "devDependencies": {
     "jest": "^30.4.2",
