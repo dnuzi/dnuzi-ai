@@ -54,6 +54,8 @@
   "files": [
     "bin/",
     "lib/",
+    "src/",
+    "scripts/",
     "python/",
     "html/",
     "README.md"
