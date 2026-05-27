@@ -27,16 +27,12 @@ All contributions, from bug reports to new features to documentation improvement
 1. **Fork** the repository on GitHub.
 2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/dnuzi-ai.git
+   git clone https://github.com/dnuzi/dnuzi-ai.git
    cd dnuzi-ai
    ```
 3. **Install** dependencies:
    ```bash
    npm install
-   ```
-4. **Create a branch** for your work:
-   ```bash
-   git checkout -b feat/your-feature-name
    ```
 
 ---
