@@ -12,6 +12,20 @@ const path     = require("path");
 const readline = require("readline");
 const pkg      = require(path.join(__dirname, "..", "package.json"));
 
+// ─── early-exit flags (before heavy deps load) ─────────────────────────────
+{
+  const args = process.argv.slice(2);
+  if (args[0] === "--version" || args[0] === "-v") {
+    console.log(pkg.version);
+    process.exit(0);
+  }
+  if (args[0] === "--help" || args[0] === "-h") {
+    // can't render the full banner yet — print a plain fallback and let the
+    // full handler below run after deps load (same behaviour as before)
+    // We do nothing here; the full handler at the bottom will fire.
+  }
+}
+
 // ─── deps ──────────────────────────────────────────────────────────────────
 const chalk          = require("chalk");
 const gradient       = require("gradient-string");
