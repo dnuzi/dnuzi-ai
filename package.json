@@ -1,7 +1,7 @@
 {
   "name": "dnuzi",
   "version": "0.0.1",
-  "description": "Dnuzi AI \u2014 Powered by DanuZz. Use in CLI, Node.js, Python, HTML and more.",
+  "description": "Dnuzi AI - Powered by DanuZz.",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "exports": {
