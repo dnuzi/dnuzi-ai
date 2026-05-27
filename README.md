@@ -354,7 +354,7 @@ npx jest --coverage --forceExit     # with coverage report
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=dnuz&label=Profile+Views&color=a044ff&style=for-the-badge&labelColor=0d0d1a" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=dnuzi&label=Profile+Views&color=a044ff&style=for-the-badge&labelColor=0d0d1a" alt="Profile views"/>
 
 <br/><br/>
 
