@@ -37,6 +37,8 @@
 
 ---
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 ## What is Dnuzi AI?
 
 **Dnuzi** is a full-featured AI SDK and CLI that wraps the [DanuZz](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
@@ -48,6 +50,8 @@
 </div>
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## Features
 
@@ -66,11 +70,15 @@
 
 ---
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 ## Contents
 
 [Install](#-install) · [CLI](#-cli) · [Node.js](#-nodejs) · [Python](#-python) · [Browser](#-browser) · [MongoDB](#-mongodb-storage) · [API Reference](#-api-reference) · [Development](#-development)
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## Install
 
@@ -83,6 +91,8 @@ npm install dnuzi
 ```
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## CLI
 
@@ -104,6 +114,8 @@ dnuzi "what is the speed of light?"
 dnuzi --help        # show the reference screen
 dnuzi --version     # print version number
 ```
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ### Inside the REPL
 
@@ -131,6 +143,8 @@ dnuzi --version     # print version number
 > AI responses render in a colour-framed box with inline syntax highlighting, markdown formatting, and live response-time display.
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## Node.js
 
@@ -169,6 +183,8 @@ ai.newConversation();      // start fresh
 
 ---
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 ## Python
 
 ```python
@@ -193,6 +209,8 @@ python dnuzi.py
 
 ---
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 ## Browser
 
 Drop-in via script tag — no bundler needed:
@@ -208,6 +226,8 @@ Drop-in via script tag — no bundler needed:
 > Or open `html/index.html` for a fully styled chat UI with zero dependencies.
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## MongoDB Storage
 
@@ -241,6 +261,8 @@ await ai.close();
 > In the CLI, just type `/mongo` — the preference is remembered between sessions.
 
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## API Reference
 
@@ -306,6 +328,8 @@ npx jest --coverage --forceExit     # with coverage report
 
 ---
 
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+
 ## Activity
 
 <div align="center">
@@ -335,5 +359,8 @@ npx jest --coverage --forceExit     # with coverage report
 <br/><br/>
 
 **⭐ If this project helped you, star it on GitHub!**
+
+
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"/> <em>Happy coding!</em>
 
 </div>
