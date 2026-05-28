@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>D-AI — Browser SDK Demo</title>
+  <title>Hiaz AI — Browser SDK Demo</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -42,13 +42,13 @@
 <body>
 <div id="app">
   <header>
-    <h1>✦ D-AI</h1>
-    <p>Powered by DanuZz &nbsp;•&nbsp; @d-ai</p>
+    <h1>✦ Hiaz AI</h1>
+    <p>Powered by DanuZz &nbsp;•&nbsp; @hiaz</p>
   </header>
   <div id="messages">
     <div class="msg ai">
-      👋 Hello! I'm <strong>D-AI</strong>, your intelligent assistant powered by DanuZz.<br>Ask me anything!
-      <div class="meta">D-AI • ready</div>
+      👋 Hello! I'm <strong>Hiaz AI</strong>, your intelligent assistant powered by DanuZz.<br>Ask me anything!
+      <div class="meta">Hiaz AI • ready</div>
     </div>
   </div>
   <div id="input-row">
@@ -58,8 +58,8 @@
 </div>
 
 <script>
-// ─── D-AI Browser SDK ──────────────────────────────────────────────────────
-const DAI = (() => {
+// ─── Hiaz AI Browser SDK ─────────────────────────────────────────────────
+const HiazAI = (() => {
   const BASE = "https://ai.dnuz.top/api/ai";
 
   class Client {
@@ -96,7 +96,7 @@ const DAI = (() => {
 })();
 
 // ─── Chat UI ──────────────────────────────────────────────────────────────
-const ai       = new DAI.Client();
+const ai       = new HiazAI.Client();
 const msgs     = document.getElementById("messages");
 const input    = document.getElementById("input");
 const sendBtn  = document.getElementById("send");
@@ -105,7 +105,7 @@ function addMsg(role, text, ms) {
   const el  = document.createElement("div");
   el.className = `msg ${role}`;
   el.innerHTML = text.replace(/\n/g, "<br>") +
-    `<div class="meta">${role === "ai" ? `D-AI • ⚡ ${ms}ms` : "You"}</div>`;
+    `<div class="meta">${role === "ai" ? `Hiaz AI • ⚡ ${ms}ms` : "You"}</div>`;
   msgs.appendChild(el);
   msgs.scrollTop = msgs.scrollHeight;
   return el;
