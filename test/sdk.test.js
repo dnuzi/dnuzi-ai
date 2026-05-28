@@ -1,8 +1,8 @@
 // test/sdk.test.js
-// Integration tests for DnuzAI high-level SDK
+// Integration tests for DAI high-level SDK
 "use strict";
 
-const { DnuzAI, DnuzClient, DnuzStorage } = require("../lib/index.cjs");
+const { DAI, DAIClient, DAIStorage } = require("../lib/index.cjs");
 
 // ── shared mock factory ──────────────────────────────────────────────────────
 function mockFetch(overrides = {}) {
@@ -29,25 +29,25 @@ afterEach(() => { delete globalThis.fetch; });
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 describe("exports", () => {
-  test("package exports DnuzAI, DnuzClient, DnuzStorage", () => {
-    expect(typeof DnuzAI).toBe("function");
-    expect(typeof DnuzClient).toBe("function");
-    expect(typeof DnuzStorage).toBe("function");
+  test("package exports DAI, DAIClient, DAIStorage", () => {
+    expect(typeof DAI).toBe("function");
+    expect(typeof DAIClient).toBe("function");
+    expect(typeof DAIStorage).toBe("function");
   });
 });
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-describe("DnuzAI", () => {
+describe("DAI", () => {
 
   describe("construction", () => {
     test("creates with default userId", () => {
-      const ai = new DnuzAI();
+      const ai = new DAI();
       expect(ai.storage.userId).toBe("anonymous");
       expect(ai.storage.enabled).toBe(false);
     });
 
     test("accepts userId option", () => {
-      const ai = new DnuzAI({ userId: "alice" });
+      const ai = new DAI({ userId: "alice" });
       expect(ai.storage.userId).toBe("alice");
     });
   });
@@ -55,7 +55,7 @@ describe("DnuzAI", () => {
   describe("chat()", () => {
     test("returns result and metadata", async () => {
       mockFetch({ result: "The sky is blue." });
-      const ai  = new DnuzAI();
+      const ai  = new DAI();
       const res = await ai.chat("Why is the sky blue?");
       expect(res.result).toBe("The sky is blue.");
       expect(res.conversationId).toBe("mock-conv-id");
@@ -64,14 +64,14 @@ describe("DnuzAI", () => {
 
     test("ask() delegates to chat()", async () => {
       mockFetch({ result: "42" });
-      const ai  = new DnuzAI();
+      const ai  = new DAI();
       const res = await ai.ask("What is the answer?");
       expect(res.result).toBe("42");
     });
 
     test("does NOT call storage.saveTurn when storage disabled", async () => {
       mockFetch();
-      const ai   = new DnuzAI();
+      const ai   = new DAI();
       const spy  = jest.spyOn(ai.storage, "saveTurn");
       await ai.chat("Hello");
       expect(spy).not.toHaveBeenCalled();
@@ -81,7 +81,7 @@ describe("DnuzAI", () => {
   describe("conversation management", () => {
     test("newConversation() resets client state", async () => {
       mockFetch({ conversationId: "cid-first" });
-      const ai = new DnuzAI();
+      const ai = new DAI();
       await ai.chat("First message");
       expect(ai.client.conversationId).toBe("cid-first");
 
@@ -92,7 +92,7 @@ describe("DnuzAI", () => {
 
     test("getHistory() returns current session history", async () => {
       mockFetch();
-      const ai = new DnuzAI();
+      const ai = new DAI();
       await ai.chat("One");
       await ai.chat("Two");
       const h = ai.getHistory();
@@ -104,52 +104,52 @@ describe("DnuzAI", () => {
 });
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-describe("DnuzStorage (offline mode)", () => {
+describe("DAIStorage (offline mode)", () => {
 
   test("enabled is false by default", () => {
-    const s = new DnuzStorage("user1");
+    const s = new DAIStorage("user1");
     expect(s.enabled).toBe(false);
   });
 
   test("saveMessage returns null when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.saveMessage({ conversationId: "c", role: "user", content: "hi" });
     expect(res).toBeNull();
   });
 
   test("saveTurn is a no-op when disabled", async () => {
-    const s = new DnuzStorage();
+    const s = new DAIStorage();
     await expect(
       s.saveTurn({ conversationId: "c", userMessage: "hi", assistantMessage: "hey", responseTime: 100 })
     ).resolves.toBeUndefined();
   });
 
   test("getConversation returns [] when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.getConversation("any-id");
     expect(res).toEqual([]);
   });
 
   test("listConversations returns [] when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.listConversations();
     expect(res).toEqual([]);
   });
 
   test("getStats returns null when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.getStats();
     expect(res).toBeNull();
   });
 
   test("getPref returns defaultValue when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.getPref("theme", "light");
     expect(res).toBe("light");
   });
 
   test("deleteConversation returns 0 when disabled", async () => {
-    const s   = new DnuzStorage();
+    const s   = new DAIStorage();
     const res = await s.deleteConversation("any-id");
     expect(res).toBe(0);
   });
