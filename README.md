@@ -23,7 +23,7 @@
 ╚═╝  ╚═══╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
 ```
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+NiyoX+AI" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Browser+%7C+CJS+%2B+ESM;%E2%9A%A1+Powered+by+NiyoX+AI" alt="Typing animation"/>
 
 <br/><br/>
 
@@ -41,11 +41,17 @@
 
 ## What is NiyoX AI?
 
-**NiyoX** is a full-featured AI SDK and CLI that wraps the [NiyoX](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
+**NiyoX** is a full-featured AI SDK and CLI that wraps the [NiyoX AI REST API](https://ai.dnuz.top/api/ai). Chat with AI from your terminal, Node.js server, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
+
+The package ships three layers you can use independently:
+
+- **`NiyoXClient`** — thin HTTP wrapper around the REST API, with in-memory history
+- **`NiyoXStorage`** — optional MongoDB persistence layer for messages, prefs, and stats
+- **`NiyoXAI`** — high-level class combining both, plus the interactive CLI
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=nodejs,python,js,mongodb,github,npm&theme=dark&perline=6" alt="Tech stack"/>
+<img src="https://skillicons.dev/icons?i=nodejs,js,mongodb,github,npm&theme=dark&perline=5" alt="Tech stack"/>
 
 </div>
 
@@ -60,10 +66,12 @@
 | Feature | Status |
 |---|:---:|
 | 🖥️ Interactive REPL CLI | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
-| 🔄 Multi-turn conversations | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
-| 🗄️ MongoDB persistence | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
+| ⚡ One-shot CLI queries | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
+| 🔄 Multi-turn conversation memory | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
+| 🗄️ MongoDB persistence (opt-in) | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
 | 🌐 Browser / CDN support | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
-| 🐍 Python SDK | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
+| 📦 CommonJS + ESM dual package | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
+| 🎨 Rich CLI output (colours, markdown) | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
 | 🚀 GitHub Actions CI/CD | ![Ready](https://img.shields.io/badge/Ready-00ffa3?style=flat-square&labelColor=0d0d1a) |
 
 </div>
@@ -74,7 +82,7 @@
 
 ## Contents
 
-[Install](#-install) · [CLI](#-cli) · [Node.js](#-nodejs) · [Python](#-python) · [Browser](#-browser) · [MongoDB](#-mongodb-storage) · [API Reference](#-api-reference) · [Development](#-development)
+[Install](#-install) · [CLI](#-cli) · [Node.js](#-nodejs) · [Browser](#-browser) · [MongoDB Storage](#-mongodb-storage) · [API Reference](#-api-reference) · [Development](#-development)
 
 ---
 
@@ -90,6 +98,8 @@ npm install -g niyox
 npm install niyox
 ```
 
+> Requires **Node.js ≥ 18** (uses native `fetch`). On older Node, install `node-fetch` and it will be picked up automatically.
+
 ---
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
@@ -102,20 +112,19 @@ npm install niyox
 niyox
 ```
 
-**One-shot question (no REPL):**
+**One-shot question — get the answer and exit:**
 
 ```bash
 niyox "what is the speed of light?"
+niyox "explain async/await in JavaScript"
 ```
 
 **Flags:**
 
 ```bash
-niyox --help        # show the reference screen
-niyox --version     # print version number
+niyox --version    # print version  (alias: -v)
+niyox --help       # show banner + command reference  (alias: -h)
 ```
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ### Inside the REPL
 
@@ -123,7 +132,7 @@ niyox --version     # print version number
   ╭──────────────────────────────────────────────────────────╮
   │                                                          │
   │   ✦ NIYOX  AI       v0.0.1                              │
-  │   Powered by NiyoX  ·  @niyox                           │
+  │   Powered by DanuZz  ·  @niyox                          │
   │                                                          │
   │   ◇ Commands                                             │
   │                                                          │
@@ -135,12 +144,13 @@ niyox --version     # print version number
   │   › /mongo           →  enable persistent storage        │
   │   › /user <id>       →  set your user ID                 │
   │   › /clear           →  clear the screen                 │
-  │   › /exit            →  quit                             │
+  │   › /version         →  show version                     │
+  │   › /exit            →  quit  (Ctrl+C also works)        │
   │                                                          │
   ╰──────────────────────────────────────────────────────────╯
 ```
 
-> AI responses render in a colour-framed box with inline syntax highlighting, markdown formatting, and live response-time display.
+> AI responses render in a colour-framed box with inline syntax highlighting, markdown-style headers and bold, and a live response-time badge. Your MongoDB preference (`/mongo`) is remembered between sessions via `conf`.
 
 ---
 
@@ -148,18 +158,18 @@ niyox --version     # print version number
 
 ## Node.js
 
-**CommonJS:**
+### CommonJS
 
 ```js
 const { NiyoXAI } = require("niyox");
 
 const ai = new NiyoXAI();
 const { result, responseTime } = await ai.chat("Tell me something interesting.");
-console.log(result);        // → "Did you know that honey never spoils…"
+console.log(result);           // → "Did you know that honey never spoils…"
 console.log(responseTime + "ms");
 ```
 
-**ESM:**
+### ESM
 
 ```js
 import { NiyoXAI } from "niyox";
@@ -169,42 +179,28 @@ const res = await ai.ask("Explain quantum entanglement.");
 console.log(res.result);
 ```
 
-**Multi-turn conversation:**
+### Multi-turn conversation
 
 ```js
 const ai = new NiyoXAI();
 
 await ai.chat("My name is Bob.");
 const r = await ai.chat("What is my name?");
-console.log(r.result);     // → remembers "Bob"
+console.log(r.result);     // → remembers "Bob" via conversationId
 
-ai.newConversation();      // start fresh
+ai.newConversation();      // reset thread + in-memory history
 ```
 
----
+### Low-level client (no storage)
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
+```js
+const { NiyoXClient } = require("niyox");
 
-## Python
+const client = new NiyoXClient({ sessionId: "my-session", timeout: 15000 });
+const res = await client.chat("Hello!");
 
-```python
-# pip install requests
-from niyox import NiyoXAI
-
-ai   = NiyoXAI()
-resp = ai.chat("What is the capital of France?")
-print(resp.result)
-print(f"response in {resp.response_time}ms")
-```
-
-**Python CLI:**
-
-```bash
-# One-shot
-python niyox.py "summarise the Turing test"
-
-# Interactive REPL
-python niyox.py
+console.log(res.result);
+console.log(client.getHistory());   // array of { role, content, timestamp }
 ```
 
 ---
@@ -213,17 +209,31 @@ python niyox.py
 
 ## Browser
 
-Drop-in via script tag — no bundler needed:
+The SDK ships a self-contained browser client at `html/index.html`. You can also inline the `NiyoXAI.Client` class directly — it uses the native browser `fetch` with no build step needed.
 
 ```html
 <script>
+  // Paste the NiyoXAI browser class from html/index.html, then:
   const ai  = new NiyoXAI.Client();
   const res = await ai.chat("Hello!");
   console.log(res.result);
+  console.log(res.responseTime + "ms");
 </script>
 ```
 
-> Or open `html/index.html` for a fully styled chat UI with zero dependencies.
+> Open `html/index.html` for a fully styled dark-theme chat UI — zero dependencies, zero bundler.
+
+**Browser client API mirrors the Node.js `NiyoXClient`:**
+
+```js
+const ai = new NiyoXAI.Client({ sessionId: "browser-tab" });
+
+await ai.chat("First message");
+await ai.chat("Second message");          // same conversationId reused
+
+ai.newConversation();                     // clear thread
+const history = ai.getHistory();          // [{ role, content, ts, ms? }, …]
+```
 
 ---
 
@@ -231,34 +241,58 @@ Drop-in via script tag — no bundler needed:
 
 ## MongoDB Storage
 
-> Storage is **completely optional** — opt in with one call.
+> Storage is **completely optional** — the SDK works fully offline without it. Opt in with one call.
 
 ```js
+const { NiyoXAI } = require("niyox");
+
 const ai = new NiyoXAI({ userId: "alice" });
-await ai.enableStorage();          // connects to NiyoX cloud DB
+await ai.enableStorage();          // connects to the NiyoX cloud MongoDB
 
 // every subsequent chat() call is automatically persisted
 const res = await ai.chat("Hello!");
 
-// list all conversation IDs
+// retrieve full message history for a conversation
+const msgs = await ai.getPersistentHistory(res.conversationId);
+
+// list all stored conversation IDs for this user
 const ids = await ai.listConversations();
 
-// retrieve a conversation
-const msgs = await ai.getPersistentHistory(ids[0]);
+// delete a conversation
+const deleted = await ai.deleteConversation(ids[0]);
 
 // usage statistics
 const stats = await ai.getStats();
 // { totalMessages: 42, totalConversations: 7, avgResponseTimeMs: "834" }
 
-// per-user preferences
+// per-user key/value preferences
 await ai.setPref("language", "en");
-const lang = await ai.getPref("language");
+const lang = await ai.getPref("language", "en");   // second arg = default
 
-// graceful shutdown
+// graceful shutdown (closes MongoDB connection)
 await ai.close();
 ```
 
-> In the CLI, just type `/mongo` — the preference is remembered between sessions.
+> **CLI shortcut:** type `/mongo` inside the REPL — the preference is saved and reconnects automatically on the next launch.
+
+### Storage-only (`NiyoXStorage`)
+
+```js
+const { NiyoXStorage } = require("niyox");
+
+const store = new NiyoXStorage("bob");
+await store.connect();                    // store.enabled === true
+
+await store.saveTurn({
+  conversationId: "abc-123",
+  userMessage:    "Hi!",
+  assistantMessage: "Hello, Bob!",
+  responseTime:   412,
+});
+
+const turns = await store.getConversation("abc-123");
+await store.disconnect();
+```
 
 ---
 
@@ -271,38 +305,62 @@ await ai.close();
 | Option | Type | Default | Description |
 |---|---|---|---|
 | `userId` | `string` | `"anonymous"` | MongoDB user identifier |
-| `sessionId` | `string` | `"default"` | API session ID |
+| `sessionId` | `string` | `"default"` | API session ID passed to the REST endpoint |
+| `conversationId` | `string` | `null` | Resume an existing conversation thread |
+| `timeout` | `number` | `30000` | Request timeout in milliseconds |
 
-### Instance Methods
+### `NiyoXAI` instance methods
 
 | Method | Returns | Description |
 |---|---|---|
-| `chat(message)` | `Promise<Resp>` | Send a message |
-| `ask(message)` | `Promise<Resp>` | Alias for `chat()` |
-| `enableStorage(userId?)` | `Promise<this>` | Connect to MongoDB |
-| `newConversation()` | `void` | Reset the conversation thread |
-| `getHistory()` | `Turn[]` | In-memory history for this session |
-| `getPersistentHistory(convId?)` | `Promise<[]>` | Load stored turns from MongoDB |
-| `listConversations()` | `Promise<id[]>` | All stored conversation IDs |
-| `deleteConversation(id)` | `Promise<n>` | Delete a stored conversation |
-| `getStats()` | `Promise<obj>` | Usage statistics |
-| `setPref(key, value)` | `Promise` | Persist a user preference |
+| `chat(message)` | `Promise<Response>` | Send a message; auto-persists if storage is enabled |
+| `ask(message)` | `Promise<Response>` | Alias for `chat()` |
+| `enableStorage(userId?)` | `Promise<this>` | Connect to MongoDB and enable persistence |
+| `newConversation()` | `void` | Reset `conversationId` and clear in-memory history |
+| `getHistory()` | `Turn[]` | Returns a copy of the in-memory history for this session |
+| `getPersistentHistory(convId?)` | `Promise<Turn[]>` | Load stored turns from MongoDB |
+| `listConversations()` | `Promise<string[]>` | All conversation IDs stored for this user |
+| `deleteConversation(id)` | `Promise<number>` | Delete a conversation; returns deleted message count |
+| `getStats()` | `Promise<Stats \| null>` | Usage statistics (requires storage) |
+| `setPref(key, value)` | `Promise<void>` | Persist a user preference in MongoDB |
 | `getPref(key, default?)` | `Promise<any>` | Retrieve a user preference |
-| `close()` | `Promise` | Close the MongoDB connection |
+| `close()` | `Promise<void>` | Gracefully close the MongoDB connection |
 
-### Response Shape
+### `NiyoXClient` constructor options
+
+Same as `NiyoXAI` options. Direct methods: `chat(message)`, `ask(message)`, `newConversation()`, `getHistory()`.
+
+### Response shape
 
 ```ts
 {
   result:         string   // AI reply text
-  conversationId: string   // thread ID (persist for multi-turn)
+  conversationId: string   // thread ID — reused automatically in subsequent calls
   sessionId:      string
   responseTime:   number   // milliseconds
   attempts:       number
 }
 ```
 
+### `NiyoXStorage` methods
+
+| Method | Description |
+|---|---|
+| `connect(userId?)` | Connect to MongoDB; sets `enabled = true` |
+| `saveTurn({ conversationId, userMessage, assistantMessage, responseTime })` | Persist a full user+assistant turn |
+| `saveMessage({ conversationId, role, content, responseTime? })` | Persist a single message |
+| `getConversation(conversationId)` | All messages for a conversation, sorted oldest-first |
+| `listConversations()` | All distinct conversation IDs for this user |
+| `deleteConversation(id)` | Delete all messages in a conversation |
+| `setPref(key, value)` / `getPref(key, default?)` | Key/value user preferences |
+| `getStats()` | `{ totalMessages, totalConversations, avgResponseTimeMs }` |
+| `disconnect()` | Close the MongoDB connection |
+
+> All storage methods are no-ops (returning `null`, `[]`, `0`, or `undefined`) when `enabled` is `false`, so you never need to guard calls yourself.
+
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
 ## Development
 
@@ -311,8 +369,36 @@ git clone https://github.com/dnuzi/niyox
 cd niyox
 npm install
 
-npm test                             # run tests
-npx jest --coverage --forceExit     # with coverage report
+# Build lib/index.cjs and lib/index.mjs from src/
+node scripts/build.js
+
+# Run the test suite
+npm test
+
+# With coverage report
+npx jest --coverage --forceExit
+```
+
+**Project layout:**
+
+```
+niyox/
+├── bin/
+│   └── cli.js            # CLI entry point (--version, --help, REPL, one-shot)
+├── src/
+│   ├── client.js         # NiyoXClient — HTTP wrapper + in-memory history
+│   └── storage.js        # NiyoXStorage — MongoDB persistence layer
+├── lib/                  # auto-generated by scripts/build.js
+│   ├── index.cjs         # CommonJS bundle (NiyoXAI + NiyoXClient + NiyoXStorage)
+│   └── index.mjs         # ESM re-export wrapper
+├── html/
+│   └── index.html        # standalone browser chat UI
+├── test/
+│   ├── client.test.js    # NiyoXClient unit tests (fetch-mocked)
+│   ├── sdk.test.js       # NiyoXAI + NiyoXStorage integration tests
+│   └── cli.test.js       # CLI binary smoke tests
+└── scripts/
+    └── build.js          # assembles lib/ from src/
 ```
 
 **Expected test output:**
