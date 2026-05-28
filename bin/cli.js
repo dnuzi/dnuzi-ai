@@ -2,11 +2,11 @@
 "use strict";
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-//   D - A I   —   C L I
-//   Powered by DanuZz · @d-ai
+//   D N U Z I   A I   —   C L I
+//   Powered by DanuZz · @hiaz
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-process.title = "d-ai";
+process.title = "hiaz";
 
 const path     = require("path");
 const readline = require("readline");
@@ -34,7 +34,7 @@ const { default: boxen } = require("boxen");
 const ora            = require("ora");
 const Table          = require("cli-table3");
 const Conf           = require("conf");
-const { DAI }   = require("../lib/index.cjs");
+const { HiazAI }   = require("../lib/index.cjs");
 
 // ─── gradient themes ───────────────────────────────────────────────────────
 const g = {
@@ -85,7 +85,7 @@ const DIV = (len = 58) => C.muted(S.dash.repeat(len));
 
 // ─── conf ──────────────────────────────────────────────────────────────────
 function getConf() {
-  return new Conf({ projectName: "d-ai", defaults: { userId: "cli_user", useMongo: false } });
+  return new Conf({ projectName: "hiaz", defaults: { userId: "cli_user", useMongo: false } });
 }
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -94,7 +94,7 @@ function getConf() {
 function printBanner() {
   console.clear();
 
-  const art = figlet.textSync("D-AI", {
+  const art = figlet.textSync("HIAZ", {
     font: "ANSI Shadow",
     horizontalLayout: "fitted",
   });
@@ -108,7 +108,7 @@ function printBanner() {
   console.log(
     "  " + C.muted(S.dash.repeat(46)) + "\n" +
     "  " + C.muted("Powered by ") + C.primary("DanuZz") +
-           C.muted("  " + S.dot + "  @d-ai") +
+           C.muted("  " + S.dot + "  @hiaz") +
            C.muted("  " + S.dot + "  v" + pkg.version) + "\n" +
     "  " + C.muted(S.dash.repeat(46))
   );
@@ -240,7 +240,7 @@ function renderResponse(text, ms) {
   const body = out.join("\n").replace(/\n{3,}/g, "\n\n");
 
   const header =
-    C.primary("  " + S.star + " D-AI") +
+    C.primary("  " + S.star + " Hiaz AI") +
     "  " + C.muted(S.dot) +
     "  " + C.muted(new Date().toLocaleTimeString());
 
@@ -281,7 +281,7 @@ function renderHistory(history) {
     const isUser = h.role === "user";
     const label  = isUser
       ? "  " + C.success(S.diamond + " You      ") + ts
-      : "  " + C.primary(S.star   + " D-AI ") + ts;
+      : "  " + C.primary(S.star   + " Hiaz AI ") + ts;
     const body   = C.white(h.content.slice(0, 180) + (h.content.length > 180 ? C.muted(" [...]") : ""));
     console.log(label + "\n  " + C.muted(S.bar + " ") + body + "\n");
   });
@@ -334,7 +334,7 @@ function writePrompt(mongoOn) {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 async function repl() {
   const conf   = getConf();
-  const ai     = new DAI({ userId: conf.get("userId") });
+  const ai     = new HiazAI({ userId: conf.get("userId") });
   let mongoOn  = false;
 
   if (conf.get("useMongo")) {
@@ -366,7 +366,7 @@ async function repl() {
     if (input === "/clear") { printBanner(); writePrompt(mongoOn); return; }
 
     if (input === "/version") {
-      console.log("\n  " + C.secondary(S.info) + "  d-ai " + C.primary("v" + pkg.version) + "\n");
+      console.log("\n  " + C.secondary(S.info) + "  hiaz " + C.primary("v" + pkg.version) + "\n");
       writePrompt(mongoOn); return;
     }
 
@@ -482,9 +482,9 @@ if (args[0] === "--help" || args[0] === "-h") {
 }
 
 if (args.length > 0) {
-  // one-shot:  d-ai "what is gravity?"
+  // one-shot:  hiaz "what is gravity?"
   const question = args.join(" ");
-  const ai       = new DAI();
+  const ai       = new HiazAI();
   const sp       = spin("Thinking…");
   ai.chat(question)
     .then((res) => { sp.stop(); renderResponse(res.result, res.responseTime); process.exit(0); })
