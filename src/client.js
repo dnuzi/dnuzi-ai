@@ -1,12 +1,12 @@
-// src/client.js — Dnuzi AI Core Client
+// src/client.js — Dnuz AI Core Client
 "use strict";
 
 const BASE_URL = "https://ai.dnuz.top/api/ai";
 
 /**
- * DnuziClient — the core wrapper around the Dnuzi AI REST API.
+ * DnuzClient — the core wrapper around the Dnuz AI REST API.
  */
-class DnuziClient {
+class DnuzClient {
   constructor(options = {}) {
     this.sessionId       = options.sessionId       || "default";
     this.conversationId  = options.conversationId  || null;
@@ -15,7 +15,7 @@ class DnuziClient {
   }
 
   /**
-   * Send a message to Dnuzi AI and get a response.
+   * Send a message to Dnuz AI and get a response.
    * @param {string} message
    * @returns {Promise<{result: string, conversationId: string, responseTime: number}>}
    */
@@ -73,4 +73,4 @@ class DnuziClient {
   getHistory() { return [...this.history]; }
 }
 
-module.exports = { DnuziClient, BASE_URL };
+module.exports = { DnuzClient, BASE_URL };
