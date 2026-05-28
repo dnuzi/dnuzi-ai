@@ -17,7 +17,7 @@ As Dnuzi AI is pre-1.0, security fixes are applied to the latest release only.
 
 If you discover a security issue, please report it privately:
 
-1. Go to the [Security tab](https://github.com/dnuzi/dnuzi-ai/security/advisories/new) on GitHub and open a **private advisory**, or
+1. Go to the [Security tab](https://github.com/dnuzi/niyox/security/advisories/new) on GitHub and open a **private advisory**, or
 2. Email the maintainer directly (see the author field in `package.json`).
 
 Include as much detail as possible:
@@ -46,7 +46,7 @@ We ask that you give us a reasonable timeframe (typically **14 days**) to addres
 
 ## Known Considerations
 
-- **MongoDB URI** — The default connection string in `src/storage.js` and `python/dnuzi.py` uses a shared cloud database intended for demo/development use. Do not store sensitive or production data through the default URI. For production use, supply your own MongoDB instance.
+- **MongoDB URI** — The default connection string in `src/storage.js` use a shared cloud database intended for demo/development use. Do not store sensitive or production data through the default URI. For production use, supply your own MongoDB instance.
 - **API endpoint** — All AI requests are sent to `https://ai.dnuz.top/api/ai` over HTTPS. No API keys are required or transmitted by the client at this time.
 - **No authentication layer** — The CLI and SDK do not authenticate the end user. Access controls are the responsibility of the deploying application.
 
