@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:4000ff&height=200&section=header&text=Dnuz%20AI&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=By+DanuZz+Developer&descAlignY=56&descSize=17" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:4000ff&height=200&section=header&text=D-AI&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=By+DanuZz+Developer&descAlignY=56&descSize=17" width="100%"/>
 
 <br/>
 
-<img src="https://img.shields.io/badge/npm-dnuz-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm"/>
+<img src="https://img.shields.io/badge/npm-d--ai-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm"/>
 &nbsp;
 <img src="https://img.shields.io/badge/license-MIT-00ffa3?style=for-the-badge&labelColor=0d0d1a" alt="license"/>
 &nbsp;
@@ -15,12 +15,12 @@
 <br/><br/>
 
 ```
-██████╗ ███╗   ██╗██╗   ██╗███████╗
-██╔══██╗████╗  ██║██║   ██║╚══███╔╝
-██║  ██║██╔██╗ ██║██║   ██║  ███╔╝ 
-██║  ██║██║╚██╗██║██║   ██║ ███╔╝  
-██████╔╝██║ ╚████║╚██████╔╝███████╗
-╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+██████╗       █████╗ ██╗
+██╔══██╗     ██╔══██╗██║
+██║  ██║     ███████║██║
+██║  ██║     ██╔══██║██║
+██████╔╝     ██║  ██║██║
+╚═════╝      ╚═╝  ╚═╝╚═╝
 ```
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+DanuZz+AI" alt="Typing animation"/>
@@ -29,9 +29,9 @@
 
 [![Live API](https://img.shields.io/badge/%F0%9F%8C%90_Live_API-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-dnuz--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuz)
+[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-d--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/d-ai)
 &nbsp;
-[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_dnuz-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/dnuz)
+[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_d--ai-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/d-ai)
 
 </div>
 
@@ -39,9 +39,9 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-## What is Dnuz AI?
+## What is D-AI?
 
-**Dnuz** is a full-featured AI SDK and CLI that wraps the [DanuZz](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
+**D-AI** is a full-featured AI SDK and CLI that wraps the [DanuZz](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
 
 <div align="center">
 
@@ -83,11 +83,11 @@
 ## Install
 
 ```bash
-# Global — gives you the dnuz command everywhere
-npm install -g dnuz
+# Global — gives you the d-ai command everywhere
+npm install -g d-ai
 
 # Local — use in your project
-npm install dnuz
+npm install d-ai
 ```
 
 ---
@@ -99,20 +99,20 @@ npm install dnuz
 **Launch the interactive REPL:**
 
 ```bash
-dnuz
+d-ai
 ```
 
 **One-shot question (no REPL):**
 
 ```bash
-dnuz "what is the speed of light?"
+d-ai "what is the speed of light?"
 ```
 
 **Flags:**
 
 ```bash
-dnuz --help        # show the reference screen
-dnuz --version     # print version number
+d-ai --help        # show the reference screen
+d-ai --version     # print version number
 ```
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
@@ -122,8 +122,8 @@ dnuz --version     # print version number
 ```
   ╭──────────────────────────────────────────────────────────╮
   │                                                          │
-  │   ✦ DNUZ  AI        v0.0.1                              │
-  │   Powered by DanuZz  ·  @dnuz                           │
+  │   ✦ D-AI              v0.0.1                            │
+  │   Powered by DanuZz  ·  @d-ai                           │
   │                                                          │
   │   ◇ Commands                                             │
   │                                                          │
@@ -151,9 +151,9 @@ dnuz --version     # print version number
 **CommonJS:**
 
 ```js
-const { DnuzAI } = require("dnuz");
+const { DAI } = require("d-ai");
 
-const ai = new DnuzAI();
+const ai = new DAI();
 const { result, responseTime } = await ai.chat("Tell me something interesting.");
 console.log(result);        // → "Did you know that honey never spoils…"
 console.log(responseTime + "ms");
@@ -162,9 +162,9 @@ console.log(responseTime + "ms");
 **ESM:**
 
 ```js
-import { DnuzAI } from "dnuz";
+import { DAI } from "d-ai";
 
-const ai  = new DnuzAI({ userId: "alice" });
+const ai  = new DAI({ userId: "alice" });
 const res = await ai.ask("Explain quantum entanglement.");
 console.log(res.result);
 ```
@@ -172,7 +172,7 @@ console.log(res.result);
 **Multi-turn conversation:**
 
 ```js
-const ai = new DnuzAI();
+const ai = new DAI();
 
 await ai.chat("My name is Bob.");
 const r = await ai.chat("What is my name?");
@@ -189,9 +189,9 @@ ai.newConversation();      // start fresh
 
 ```python
 # pip install requests
-from dnuz import DnuzAI
+from d_ai import DAI
 
-ai   = DnuzAI()
+ai   = DAI()
 resp = ai.chat("What is the capital of France?")
 print(resp.result)
 print(f"response in {resp.response_time}ms")
@@ -201,10 +201,10 @@ print(f"response in {resp.response_time}ms")
 
 ```bash
 # One-shot
-python dnuz.py "summarise the Turing test"
+python d_ai.py "summarise the Turing test"
 
 # Interactive REPL
-python dnuz.py
+python d_ai.py
 ```
 
 ---
@@ -217,7 +217,7 @@ Drop-in via script tag — no bundler needed:
 
 ```html
 <script>
-  const ai  = new DnuzAI.Client();
+  const ai  = new DAI.Client();
   const res = await ai.chat("Hello!");
   console.log(res.result);
 </script>
@@ -234,8 +234,8 @@ Drop-in via script tag — no bundler needed:
 > Storage is **completely optional** — opt in with one call.
 
 ```js
-const ai = new DnuzAI({ userId: "alice" });
-await ai.enableStorage();          // connects to Dnuz cloud DB
+const ai = new DAI({ userId: "alice" });
+await ai.enableStorage();          // connects to D-AI cloud DB
 
 // every subsequent chat() call is automatically persisted
 const res = await ai.chat("Hello!");
@@ -266,7 +266,7 @@ await ai.close();
 
 ## API Reference
 
-### `new DnuzAI(options?)`
+### `new DAI(options?)`
 
 | Option | Type | Default | Description |
 |---|---|---|---|
@@ -307,8 +307,8 @@ await ai.close();
 ## Development
 
 ```bash
-git clone https://github.com/dnuzi/dnuz
-cd dnuz
+git clone https://github.com/dnuzi/d-ai
+cd d-ai
 npm install
 
 npm test                             # run tests
@@ -335,9 +335,9 @@ npx jest --coverage --forceExit     # with coverage report
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dnuzi/dnuz/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dnuzi/dnuz/output/github-contribution-grid-snake.svg"/>
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/dnuzi/dnuz/output/github-contribution-grid-snake.svg" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dnuzi/d-ai/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dnuzi/d-ai/output/github-contribution-grid-snake.svg"/>
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/dnuzi/d-ai/output/github-contribution-grid-snake.svg" width="100%"/>
 </picture>
 
 </div>
@@ -350,7 +350,7 @@ npx jest --coverage --forceExit     # with coverage report
 
 [![API](https://img.shields.io/badge/API_Endpoint-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fdnuz-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/dnuz)
+[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fd--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/d-ai)
 
 <br/>
 
