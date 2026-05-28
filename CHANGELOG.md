@@ -29,7 +29,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
   - `getConversation()` / `listConversations()` / `deleteConversation()`
   - `getStats()` for per-user usage statistics
   - `setPref()` / `getPref()` for persistent user preferences
-- `DnuziAI` — high-level SDK combining client and storage
+- `NiyoXAI` — high-level SDK combining client and storage
   - `enableStorage()` opt-in
   - Full delegation to `NiyoXClient` and `NiyoXStorage`
 - **CLI** (`bin/cli.js`) with interactive REPL
