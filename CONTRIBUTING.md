@@ -1,4 +1,4 @@
-# Contributing to Dnuzi AI
+# Contributing to NiyoX AI
 
 First off — thank you for taking the time to contribute! 🎉
 
@@ -27,7 +27,7 @@ All contributions, from bug reports to new features to documentation improvement
 1. **Fork** the repository on GitHub.
 2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/dnuzi/dnuzi-ai.git
+   git clone https://github.com/dnuzi/niyox.git
    cd dnuzi-ai
    ```
 3. **Install** dependencies:
@@ -43,7 +43,7 @@ All contributions, from bug reports to new features to documentation improvement
 
 Before opening an issue, please:
 
-- Search [existing issues](https://github.com/dnuzi/dnuzi-ai/issues) to avoid duplicates.
+- Search [existing issues](https://github.com/dnuzi/niyox/issues) to avoid duplicates.
 - Reproduce the bug on the latest version.
 
 When filing a bug report, include:
@@ -93,7 +93,7 @@ A maintainer will review your PR. Please be patient; all feedback is meant to be
 ## Development Setup
 
 ```
-dnuzi-ai/
+niyox/
 ├── bin/          CLI entry point  (cli.js)
 ├── src/          Source files
 │   ├── client.js     Core HTTP client
@@ -122,7 +122,7 @@ dnuzi-ai/
 | Layer | File | Responsibility |
 |---|---|---|
 | CLI | `bin/cli.js` | Interactive REPL + one-shot commands |
-| SDK (high-level) | `src/index.js` | `DnuziAI` — combines client + storage |
+| SDK (high-level) | `src/index.js` | `NiyoXAI` — combines client + storage |
 | HTTP client | `src/client.js` | Raw API calls, in-memory history |
 | Persistence | `src/storage.js` | Optional MongoDB layer |
 | Python SDK | `python/dnuzi.py` | Mirror of the JS SDK in Python |
