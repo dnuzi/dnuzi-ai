@@ -1,12 +1,12 @@
-// src/client.js — D-AI Core Client
+// src/client.js — Hiaz AI Core Client
 "use strict";
 
 const BASE_URL = "https://ai.dnuz.top/api/ai";
 
 /**
- * DAIClient — the core wrapper around the D-AI REST API.
+ * HiazClient — the core wrapper around the Hiaz AI REST API.
  */
-class DAIClient {
+class HiazClient {
   constructor(options = {}) {
     this.sessionId       = options.sessionId       || "default";
     this.conversationId  = options.conversationId  || null;
@@ -15,7 +15,7 @@ class DAIClient {
   }
 
   /**
-   * Send a message to D-AI and get a response.
+   * Send a message to Hiaz AI and get a response.
    * @param {string} message
    * @returns {Promise<{result: string, conversationId: string, responseTime: number}>}
    */
@@ -73,4 +73,4 @@ class DAIClient {
   getHistory() { return [...this.history]; }
 }
 
-module.exports = { DAIClient, BASE_URL };
+module.exports = { HiazClient, BASE_URL };
