@@ -15,12 +15,12 @@
 <br/><br/>
 
 ```
-██████╗       █████╗ ██╗
-██╔══██╗     ██╔══██╗██║
-██║  ██║     ███████║██║
-██║  ██║     ██╔══██║██║
-██████╔╝     ██║  ██║██║
-╚═════╝      ╚═╝  ╚═╝╚═╝
+██████╗ ███╗   ██╗██╗   ██╗███████╗██╗
+██╔══██╗████╗  ██║██║   ██║╚══███╔╝██║
+██║  ██║██╔██╗ ██║██║   ██║  ███╔╝ ██║
+██║  ██║██║╚██╗██║██║   ██║ ███╔╝  ██║
+██████╔╝██║ ╚████║╚██████╔╝███████╗██║
+╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝
 ```
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+DanuZz+AI" alt="Typing animation"/>
