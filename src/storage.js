@@ -2,7 +2,7 @@
 "use strict";
 
 const MONGO_URI = "mongodb+srv://danuz_movanest:danuz_movanest@cluster0.3pm9uqz.mongodb.net/";
-const DB_NAME   = "hiaz_npm";
+const DB_NAME   = "niyox_npm";
 
 let _client = null;
 let _db     = null;
@@ -25,9 +25,9 @@ async function closeDb() {
 }
 
 /**
- * HiazStorage — handles optional persistent chat/session storage.
+ * NiyoXStorage — handles optional persistent chat/session storage.
  */
-class HiazStorage {
+class NiyoXStorage {
   constructor(userId = "anonymous") {
     this.userId  = userId;
     this.enabled = false;
@@ -135,4 +135,4 @@ class HiazStorage {
   async disconnect() { await closeDb(); this.enabled = false; }
 }
 
-module.exports = { HiazStorage, getDb, closeDb };
+module.exports = { NiyoXStorage, getDb, closeDb };
