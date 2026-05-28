@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to **Dnuzi AI** are documented here.
+All notable changes to **NiyoX AI** are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -18,7 +18,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
 ## [0.0.1] — 2024-01-01
 
 ### Added
-- `DnuziClient` — core HTTP wrapper around the `ai.dnuz.top` REST API
+- `NiyoXClient` — core HTTP wrapper around the `ai.dnuz.top` REST API
   - `chat(message)` / `ask(message)` for sending messages
   - In-memory conversation history with `getHistory()`
   - `newConversation()` to reset conversation thread
@@ -39,7 +39,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
   - Markdown rendering with syntax highlighting
   - Coloured boxed responses with response-time display
 - **Python SDK** (`python/dnuzi.py`)
-  - `DnuziClient`, `DnuziStorage`, `DnuziAI` classes
+  - `NiyoXClient`, `DnuziStorage`, `DnuziAI` classes
   - Interactive REPL and one-shot CLI (`python dnuzi.py`)
 - **Browser SDK** (`html/index.html`)
   - Zero-dependency chat UI
