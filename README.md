@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:4000ff&height=200&section=header&text=Hiaz%20AI&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=By+DanuZz+Developer&descAlignY=56&descSize=17" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:4000ff&height=200&section=header&text=NiyoX%20AI&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=By+NiyoX+Developer&descAlignY=56&descSize=17" width="100%"/>
 
 <br/>
 
-<img src="https://img.shields.io/badge/npm-hiaz-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm"/>
+<img src="https://img.shields.io/badge/npm-niyox-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm"/>
 &nbsp;
 <img src="https://img.shields.io/badge/license-MIT-00ffa3?style=for-the-badge&labelColor=0d0d1a" alt="license"/>
 &nbsp;
@@ -15,23 +15,23 @@
 <br/><br/>
 
 ```
-██╗  ██╗██╗ █████╗ ███████╗
-██║  ██║██║██╔══██╗╚══███╔╝
-███████║██║███████║  ███╔╝ 
-██╔══██║██║██╔══██║ ███╔╝  
-██║  ██║██║██║  ██║███████╗
-╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝
+███╗   ██╗██╗██╗   ██╗ ██████╗ ██╗  ██╗
+████╗  ██║██║╚██╗ ██╔╝██╔═══██╗╚██╗██╔╝
+██╔██╗ ██║██║ ╚████╔╝ ██║   ██║ ╚███╔╝ 
+██║╚██╗██║██║  ╚██╔╝  ██║   ██║ ██╔██╗ 
+██║ ╚████║██║   ██║   ╚██████╔╝██╔╝ ██╗
+╚═╝  ╚═══╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
 ```
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+DanuZz+AI" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+MongoDB+persistent+storage;%F0%9F%8C%90+Node.js+%7C+Python+%7C+Browser;%E2%9A%A1+Powered+by+NiyoX+AI" alt="Typing animation"/>
 
 <br/><br/>
 
 [![Live API](https://img.shields.io/badge/%F0%9F%8C%90_Live_API-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-hiaz-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/hiaz)
+[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-niyox--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/niyox)
 &nbsp;
-[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_hiaz-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/hiaz)
+[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_niyox-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/niyox)
 
 </div>
 
@@ -39,9 +39,9 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-## What is Hiaz AI?
+## What is NiyoX AI?
 
-**Hiaz** is a full-featured AI SDK and CLI that wraps the [DanuZz](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
+**NiyoX** is a full-featured AI SDK and CLI that wraps the [NiyoX](https://ai.dnuz.top) API. Chat with AI from your terminal, Node.js server, Python script, or browser — with optional MongoDB persistence and multi-turn conversation memory built in.
 
 <div align="center">
 
@@ -83,11 +83,11 @@
 ## Install
 
 ```bash
-# Global — gives you the hiaz command everywhere
-npm install -g hiaz
+# Global — gives you the niyox command everywhere
+npm install -g niyox
 
 # Local — use in your project
-npm install hiaz
+npm install niyox
 ```
 
 ---
@@ -99,20 +99,20 @@ npm install hiaz
 **Launch the interactive REPL:**
 
 ```bash
-hiaz
+niyox
 ```
 
 **One-shot question (no REPL):**
 
 ```bash
-hiaz "what is the speed of light?"
+niyox "what is the speed of light?"
 ```
 
 **Flags:**
 
 ```bash
-hiaz --help        # show the reference screen
-hiaz --version     # print version number
+niyox --help        # show the reference screen
+niyox --version     # print version number
 ```
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
@@ -122,8 +122,8 @@ hiaz --version     # print version number
 ```
   ╭──────────────────────────────────────────────────────────╮
   │                                                          │
-  │   ✦ HIAZ  AI        v0.0.1                              │
-  │   Powered by DanuZz  ·  @hiaz                           │
+  │   ✦ NIYOX  AI       v0.0.1                              │
+  │   Powered by NiyoX  ·  @niyox                           │
   │                                                          │
   │   ◇ Commands                                             │
   │                                                          │
@@ -151,9 +151,9 @@ hiaz --version     # print version number
 **CommonJS:**
 
 ```js
-const { HiazAI } = require("hiaz");
+const { NiyoXAI } = require("niyox");
 
-const ai = new HiazAI();
+const ai = new NiyoXAI();
 const { result, responseTime } = await ai.chat("Tell me something interesting.");
 console.log(result);        // → "Did you know that honey never spoils…"
 console.log(responseTime + "ms");
@@ -162,9 +162,9 @@ console.log(responseTime + "ms");
 **ESM:**
 
 ```js
-import { HiazAI } from "hiaz";
+import { NiyoXAI } from "niyox";
 
-const ai  = new HiazAI({ userId: "alice" });
+const ai  = new NiyoXAI({ userId: "alice" });
 const res = await ai.ask("Explain quantum entanglement.");
 console.log(res.result);
 ```
@@ -172,7 +172,7 @@ console.log(res.result);
 **Multi-turn conversation:**
 
 ```js
-const ai = new HiazAI();
+const ai = new NiyoXAI();
 
 await ai.chat("My name is Bob.");
 const r = await ai.chat("What is my name?");
@@ -189,9 +189,9 @@ ai.newConversation();      // start fresh
 
 ```python
 # pip install requests
-from hiaz import HiazAI
+from niyox import NiyoXAI
 
-ai   = HiazAI()
+ai   = NiyoXAI()
 resp = ai.chat("What is the capital of France?")
 print(resp.result)
 print(f"response in {resp.response_time}ms")
@@ -201,10 +201,10 @@ print(f"response in {resp.response_time}ms")
 
 ```bash
 # One-shot
-python hiaz.py "summarise the Turing test"
+python niyox.py "summarise the Turing test"
 
 # Interactive REPL
-python hiaz.py
+python niyox.py
 ```
 
 ---
@@ -217,7 +217,7 @@ Drop-in via script tag — no bundler needed:
 
 ```html
 <script>
-  const ai  = new HiazAI.Client();
+  const ai  = new NiyoXAI.Client();
   const res = await ai.chat("Hello!");
   console.log(res.result);
 </script>
@@ -234,8 +234,8 @@ Drop-in via script tag — no bundler needed:
 > Storage is **completely optional** — opt in with one call.
 
 ```js
-const ai = new HiazAI({ userId: "alice" });
-await ai.enableStorage();          // connects to Hiaz cloud DB
+const ai = new NiyoXAI({ userId: "alice" });
+await ai.enableStorage();          // connects to NiyoX cloud DB
 
 // every subsequent chat() call is automatically persisted
 const res = await ai.chat("Hello!");
@@ -266,7 +266,7 @@ await ai.close();
 
 ## API Reference
 
-### `new HiazAI(options?)`
+### `new NiyoXAI(options?)`
 
 | Option | Type | Default | Description |
 |---|---|---|---|
@@ -307,8 +307,8 @@ await ai.close();
 ## Development
 
 ```bash
-git clone https://github.com/dnuzi/hiaz
-cd hiaz
+git clone https://github.com/dnuzi/niyox
+cd niyox
 npm install
 
 npm test                             # run tests
@@ -335,9 +335,9 @@ npx jest --coverage --forceExit     # with coverage report
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dnuzi/hiaz/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dnuzi/hiaz/output/github-contribution-grid-snake.svg"/>
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/dnuzi/hiaz/output/github-contribution-grid-snake.svg" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dnuzi/niyox/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dnuzi/niyox/output/github-contribution-grid-snake.svg"/>
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/dnuzi/niyox/output/github-contribution-grid-snake.svg" width="100%"/>
 </picture>
 
 </div>
@@ -350,16 +350,15 @@ npx jest --coverage --forceExit     # with coverage report
 
 [![API](https://img.shields.io/badge/API_Endpoint-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fhiaz-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/hiaz)
+[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fniyox-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/niyox)
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=hiaz&label=Profile+Views&color=a044ff&style=for-the-badge&labelColor=0d0d1a" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=dnuzi&label=Profile+Views&color=a044ff&style=for-the-badge&labelColor=0d0d1a" alt="Profile views"/>
 
 <br/><br/>
 
 **⭐ If this project helped you, star it on GitHub!**
-
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"/> <em>Happy coding!</em>
 
