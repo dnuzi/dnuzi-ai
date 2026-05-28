@@ -34,13 +34,13 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
   - Full delegation to `NiyoXClient` and `NiyoXStorage`
 - **CLI** (`bin/cli.js`) with interactive REPL
   - Commands: `/help`, `/new`, `/history`, `/stats`, `/convs`, `/mongo`, `/user`, `/clear`, `/exit`
-  - One-shot mode: `dnuzi "your question"`
+  - One-shot mode: `niyox "your question"`
   - `--version` / `-v` and `--help` / `-h` flags
   - Markdown rendering with syntax highlighting
   - Coloured boxed responses with response-time display
 - **Browser SDK** (`html/index.html`)
   - Zero-dependency chat UI
-  - Inline `DnuziAI.Client` — drop-in via script tag
+  - Inline `NiyoXAI.Client` — drop-in via script tag
 - **ESM + CJS dual build** (`lib/index.mjs`, `lib/index.cjs`)
 - Jest test suite — 28 tests, ~94 % statement coverage
 - GitHub Actions CI/CD workflow
