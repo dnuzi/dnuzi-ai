@@ -1,12 +1,12 @@
-// src/client.js — Hiaz AI Core Client
+// src/client.js — NiyoX AI Core Client
 "use strict";
 
 const BASE_URL = "https://ai.dnuz.top/api/ai";
 
 /**
- * HiazClient — the core wrapper around the Hiaz AI REST API.
+ * NiyoXClient — the core wrapper around the NiyoX AI REST API.
  */
-class HiazClient {
+class NiyoXClient {
   constructor(options = {}) {
     this.sessionId       = options.sessionId       || "default";
     this.conversationId  = options.conversationId  || null;
@@ -15,7 +15,7 @@ class HiazClient {
   }
 
   /**
-   * Send a message to Hiaz AI and get a response.
+   * Send a message to NiyoX AI and get a response.
    * @param {string} message
    * @returns {Promise<{result: string, conversationId: string, responseTime: number}>}
    */
@@ -73,4 +73,4 @@ class HiazClient {
   getHistory() { return [...this.history]; }
 }
 
-module.exports = { HiazClient, BASE_URL };
+module.exports = { NiyoXClient, BASE_URL };
