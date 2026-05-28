@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dnuzi AI — Browser SDK Demo</title>
+  <title>Dnuz AI — Browser SDK Demo</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -42,13 +42,13 @@
 <body>
 <div id="app">
   <header>
-    <h1>✦ Dnuzi AI</h1>
-    <p>Powered by DanuZz &nbsp;•&nbsp; @dnuzi</p>
+    <h1>✦ Dnuz AI</h1>
+    <p>Powered by DanuZz &nbsp;•&nbsp; @dnuz</p>
   </header>
   <div id="messages">
     <div class="msg ai">
-      👋 Hello! I'm <strong>Dnuzi AI</strong>, your intelligent assistant powered by DanuZz.<br>Ask me anything!
-      <div class="meta">Dnuzi AI • ready</div>
+      👋 Hello! I'm <strong>Dnuz AI</strong>, your intelligent assistant powered by DanuZz.<br>Ask me anything!
+      <div class="meta">Dnuz AI • ready</div>
     </div>
   </div>
   <div id="input-row">
@@ -58,8 +58,8 @@
 </div>
 
 <script>
-// ─── Dnuzi AI Browser SDK ─────────────────────────────────────────────────
-const DnuziAI = (() => {
+// ─── Dnuz AI Browser SDK ─────────────────────────────────────────────────
+const DnuzAI = (() => {
   const BASE = "https://ai.dnuz.top/api/ai";
 
   class Client {
@@ -96,7 +96,7 @@ const DnuziAI = (() => {
 })();
 
 // ─── Chat UI ──────────────────────────────────────────────────────────────
-const ai       = new DnuziAI.Client();
+const ai       = new DnuzAI.Client();
 const msgs     = document.getElementById("messages");
 const input    = document.getElementById("input");
 const sendBtn  = document.getElementById("send");
@@ -105,7 +105,7 @@ function addMsg(role, text, ms) {
   const el  = document.createElement("div");
   el.className = `msg ${role}`;
   el.innerHTML = text.replace(/\n/g, "<br>") +
-    `<div class="meta">${role === "ai" ? `Dnuzi AI • ⚡ ${ms}ms` : "You"}</div>`;
+    `<div class="meta">${role === "ai" ? `Dnuz AI • ⚡ ${ms}ms` : "You"}</div>`;
   msgs.appendChild(el);
   msgs.scrollTop = msgs.scrollHeight;
   return el;
