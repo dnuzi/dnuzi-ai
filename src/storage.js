@@ -2,7 +2,7 @@
 "use strict";
 
 const MONGO_URI = "mongodb+srv://danuz_movanest:danuz_movanest@cluster0.3pm9uqz.mongodb.net/";
-const DB_NAME   = "dnuzi_npm";
+const DB_NAME   = "dnuz_npm";
 
 let _client = null;
 let _db     = null;
@@ -25,9 +25,9 @@ async function closeDb() {
 }
 
 /**
- * DnuziStorage — handles optional persistent chat/session storage.
+ * DnuzStorage — handles optional persistent chat/session storage.
  */
-class DnuziStorage {
+class DnuzStorage {
   constructor(userId = "anonymous") {
     this.userId  = userId;
     this.enabled = false;
@@ -135,4 +135,4 @@ class DnuziStorage {
   async disconnect() { await closeDb(); this.enabled = false; }
 }
 
-module.exports = { DnuziStorage, getDb, closeDb };
+module.exports = { DnuzStorage, getDb, closeDb };
