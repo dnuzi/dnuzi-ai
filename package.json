@@ -1,7 +1,7 @@
 {
-  "name": "hiaz",
+  "name": "niyox",
   "version": "0.0.1",
-  "description": "Hiaz AI - Powered by DanuZz.",
+  "description": "NiyoX AI - Powered by DanuZz.",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "exports": {
@@ -11,7 +11,7 @@
     }
   },
   "bin": {
-    "hiaz": "./bin/cli.js"
+    "niyox": "./bin/cli.js"
   },
   "scripts": {
     "build": "node scripts/build.js",
@@ -19,12 +19,11 @@
     "test": "jest --coverage --forceExit"
   },
   "keywords": [
-    "hiaz",
+    "niyox",
     "ai",
     "cli",
     "chatbot",
-    "dnuzi",
-    "danuzz",
+    "danuZz",
     "developer-tools",
     "terminal",
     "agentic",
@@ -63,7 +62,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dnuzi/hiaz"
+    "url": "https://github.com/dnuzi/niyox"
   },
   "devDependencies": {
     "jest": "^30.4.2",
