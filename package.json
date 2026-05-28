@@ -1,7 +1,7 @@
 {
-  "name": "d-ai",
+  "name": "hiaz",
   "version": "0.0.1",
-  "description": "D-AI - Powered by DanuZz.",
+  "description": "Hiaz AI - Powered by DanuZz.",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "exports": {
@@ -11,7 +11,7 @@
     }
   },
   "bin": {
-    "d-ai": "./bin/cli.js"
+    "hiaz": "./bin/cli.js"
   },
   "scripts": {
     "build": "node scripts/build.js",
@@ -19,7 +19,7 @@
     "test": "jest --coverage --forceExit"
   },
   "keywords": [
-    "d-ai",
+    "hiaz",
     "ai",
     "cli",
     "chatbot",
@@ -29,7 +29,7 @@
     "agentic",
     "assistant"
   ],
-  "author": "DanuZz (@d-ai)",
+  "author": "DanuZz (@dnuzi)",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.0",
@@ -62,7 +62,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dnuzi/d-ai"
+    "url": "https://github.com/dnuzi/hiaz"
   },
   "devDependencies": {
     "jest": "^30.4.2",
