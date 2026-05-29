@@ -1,7 +1,7 @@
 // src/storage.js — Optional MongoDB persistence layer
 "use strict";
 
-const DEFAULT_MONGO_URI = "mongodb+srv://danuz_movanest:danuz_movanest@cluster0.3pm9uqz.mongodb.net/";
+const DEFAULT_MONGO_URI = "mongodb+srv://danuzdev_db_user:eUcIyqvRaNEKnAtA@niyoxai.tzrs4rg.mongodb.net/";
 const DEFAULT_DB_NAME   = "niyox_npm";
 
 // Per-URI connection cache so multiple NiyoXStorage instances
