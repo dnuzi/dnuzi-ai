@@ -60,10 +60,6 @@ We ask that you give us a reasonable timeframe (typically **14 days**) to addres
   // CLI
   /mongo mongodb+srv://user:pass@your-cluster.mongodb.net/
   ```
-  ```python
-  # Python
-  ai = NiyoXAI(mongo_uri="mongodb+srv://user:pass@your-cluster.mongodb.net/")
-  ```
 - Never commit a `mongoUri` containing credentials to source control. Use environment variables instead:
   ```js
   const ai = new NiyoXAI({ mongoUri: process.env.MONGO_URI });
@@ -77,9 +73,6 @@ We ask that you give us a reasonable timeframe (typically **14 days**) to addres
 
 **No authentication layer**
 - The CLI and SDK do not authenticate the end user. Access controls are the responsibility of the deploying application.
-
-**Python SDK**
-- The Python SDK (`python/niyox.py`) uses `urllib` for requests and `pymongo` for storage. Both are subject to the same considerations above. Keep your dependencies updated.
 
 ---
 
