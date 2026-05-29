@@ -29,7 +29,7 @@
 ╚═╝  ╚═══╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
 ```
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%90%8D+Python+%7C+Node.js+%7C+React+%7C+Next.js;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+Custom+MongoDB+%2B+NiyoX+cloud+DB;%E2%9A%A1+Powered+by+NiyoX+AI" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=800&color=A044FF&center=true&vCenter=true&width=600&height=45&lines=%F0%9F%A4%96+Intelligent+AI+SDK+%26+CLI;%F0%9F%9F%A6+Node.js+%7C+React+%7C+Next.js+%7C+Browser;%F0%9F%92%AC+Multi-turn+conversation+memory;%F0%9F%97%84%EF%B8%8F+Custom+MongoDB+%2B+NiyoX+cloud+DB;%E2%9A%A1+Powered+by+NiyoX+AI" alt="Typing animation"/>
 
 <br/><br/>
 
@@ -55,10 +55,9 @@ The package ships four layers you can use independently:
 - **`NiyoXStorage`** — optional MongoDB layer (plug in your own URI)
 - **`NiyoXAI`** — high-level class combining both
 - **`useNiyoX` / `NiyoXChat`** — React hook + ready-made component
-- **Python SDK** — `niyox.py` (sync + async, optional pymongo)
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i=nodejs,js,ts,react,nextjs,python,mongodb,github,npm&theme=dark&perline=9" alt="Tech stack"/>
+<img src="https://skillicons.dev/icons?i=nodejs,js,ts,react,nextjs,mongodb,github,npm&theme=dark&perline=8" alt="Tech stack"/>
 </div>
 
 ---
@@ -70,7 +69,6 @@ The package ships four layers you can use independently:
 | # | Change |
 |---|---|
 | 🗄️ | **Custom MongoDB** — pass your own `mongoUri` + `dbName` anywhere |
-| 🐍 | **Python SDK** — sync & async clients, optional `pymongo` storage |
 | ⚛️ | **React hook** — `useNiyoX()`, `<NiyoXChat>`, `<NiyoXProvider>` |
 | 🔷 | **Next.js** — App Router example with Tailwind |
 | ⚡ | **Vite** — vanilla JS example |
@@ -90,7 +88,6 @@ The package ships four layers you can use independently:
 | ⚡ One-shot CLI queries | ✅ |
 | 🔄 Multi-turn conversation memory | ✅ |
 | 🗄️ Custom MongoDB URI (bring your own DB) | ✅ **new** |
-| 🐍 Python SDK (sync + async) | ✅ **new** |
 | ⚛️ React hook + component | ✅ **new** |
 | 🔷 Next.js App Router support | ✅ **new** |
 | ⚡ Vite + vanilla JS example | ✅ **new** |
@@ -106,7 +103,7 @@ The package ships four layers you can use independently:
 
 ## Contents
 
-[Install](#-install) · [CLI](#-cli) · [Node.js](#-nodejs) · [React / Vite](#-react--vite) · [Next.js](#-nextjs) · [Python](#-python) · [Custom MongoDB](#-custom-mongodb) · [Browser](#-browser) · [API Reference](#-api-reference) · [Development](#-development)
+[Install](#-install) · [CLI](#-cli) · [Node.js](#-nodejs) · [React / Vite](#-react--vite) · [Next.js](#-nextjs) · [Custom MongoDB](#-custom-mongodb) · [Browser](#-browser) · [API Reference](#-api-reference) · [Development](#-development)
 
 ---
 
@@ -227,7 +224,7 @@ ai.newConversation();     // reset thread + in-memory history
 
 ## Custom MongoDB
 
-> Works everywhere — Node.js, CLI, Python. Storage is **always optional**.
+> Works everywhere — Node.js and CLI. Storage is **always optional**.
 
 ### Node.js / ESM
 
@@ -394,91 +391,6 @@ export async function POST(req: Request) {
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-## Python
-
-### Install
-
-```bash
-pip install niyox-ai               # core only (no extra deps)
-pip install "niyox-ai[mongo]"      # + MongoDB persistence (pymongo)
-pip install "niyox-ai[async]"      # + async support (aiohttp)
-pip install "niyox-ai[all]"        # everything
-```
-
-> The Python SDK lives in `python/niyox.py` — copy it into your project or install from PyPI once published.
-
-### Quick start
-
-```python
-from niyox import NiyoXAI
-
-ai = NiyoXAI()
-res = ai.chat("What is Python?")
-print(res["result"])
-print(f"Response time: {res['response_time']}ms")
-```
-
-### Custom MongoDB
-
-```python
-from niyox import NiyoXAI
-
-ai = NiyoXAI(
-    user_id="alice",
-    mongo_uri="mongodb+srv://user:pass@cluster.mongodb.net/",
-    db_name="my_app",
-)
-ai.enable_storage()
-
-res = ai.chat("Hello!")
-msgs = ai.get_persistent_history(res["conversation_id"])
-
-ai.close()
-```
-
-### Context manager
-
-```python
-from niyox import NiyoXAI
-
-with NiyoXAI(user_id="alice") as ai:
-    ai.enable_storage()
-    res = ai.chat("Tell me a joke!")
-    print(res["result"])
-# MongoDB connection closed automatically
-```
-
-### Async
-
-```python
-import asyncio
-from niyox import AsyncNiyoXAI
-
-async def main():
-    async with AsyncNiyoXAI() as ai:
-        res = await ai.chat("Explain asyncio in Python.")
-        print(res["result"])
-
-asyncio.run(main())
-```
-
-### Multi-turn
-
-```python
-from niyox import NiyoXAI
-
-ai = NiyoXAI()
-ai.chat("My name is Alice.")
-r  = ai.chat("What's my name?")
-print(r["result"])   # → Alice
-
-ai.new_conversation()   # fresh thread
-```
-
----
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
-
 ## Browser
 
 Zero-dependency browser client (no bundler needed):
@@ -566,19 +478,6 @@ Returns `{ messages, input, setInput, isLoading, error, sendMessage, newConversa
 }
 ```
 
-### Python `NiyoXAI` constructor
-
-```python
-NiyoXAI(
-    user_id="anonymous",
-    session_id="default",
-    conversation_id=None,
-    timeout=30,
-    mongo_uri=None,    # custom MongoDB URI
-    db_name=None,      # custom database name
-)
-```
-
 ---
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
@@ -611,10 +510,6 @@ niyox/
 │   └── index.mjs
 ├── react/
 │   └── useNiyoX.js         # useNiyoX hook + NiyoXChat + NiyoXProvider ✨
-├── python/
-│   ├── niyox.py            # Python SDK (sync + async) ✨
-│   ├── setup.py
-│   └── README_PYTHON.md
 ├── html/
 │   └── index.html          # browser chat UI
 ├── examples/
