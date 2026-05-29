@@ -1,42 +1,86 @@
 // src/storage.js — Optional MongoDB persistence layer
 "use strict";
 
-const MONGO_URI = "mongodb+srv://danuz_movanest:danuz_movanest@cluster0.3pm9uqz.mongodb.net/";
-const DB_NAME   = "niyox_npm";
+const DEFAULT_MONGO_URI = "mongodb+srv://danuz_movanest:danuz_movanest@cluster0.3pm9uqz.mongodb.net/";
+const DEFAULT_DB_NAME   = "niyox_npm";
 
-let _client = null;
-let _db     = null;
+// Per-URI connection cache so multiple NiyoXStorage instances
+// pointing at the same DB share one MongoClient.
+const _cache = new Map(); // uri → { client, db }
 
-async function getDb() {
-  if (_db) return _db;
+async function getDb(uri = DEFAULT_MONGO_URI, dbName = DEFAULT_DB_NAME) {
+  const cacheKey = `${uri}::${dbName}`;
+  if (_cache.has(cacheKey)) return _cache.get(cacheKey).db;
+
   try {
     const { MongoClient } = require("mongodb");
-    _client = new MongoClient(MONGO_URI, { serverSelectionTimeoutMS: 5000 });
-    await _client.connect();
-    _db = _client.db(DB_NAME);
-    return _db;
+    const client = new MongoClient(uri, { serverSelectionTimeoutMS: 5000 });
+    await client.connect();
+    const db = client.db(dbName);
+    _cache.set(cacheKey, { client, db });
+    return db;
   } catch (err) {
     throw new Error(`MongoDB connection failed: ${err.message}`);
   }
 }
 
-async function closeDb() {
-  if (_client) { await _client.close(); _client = null; _db = null; }
+async function closeDb(uri = DEFAULT_MONGO_URI, dbName = DEFAULT_DB_NAME) {
+  const cacheKey = `${uri}::${dbName}`;
+  const entry = _cache.get(cacheKey);
+  if (entry) {
+    await entry.client.close();
+    _cache.delete(cacheKey);
+  }
+}
+
+/** Close ALL open MongoDB connections (useful in tests / process exit) */
+async function closeAllDb() {
+  for (const [, entry] of _cache) await entry.client.close();
+  _cache.clear();
 }
 
 /**
  * NiyoXStorage — handles optional persistent chat/session storage.
+ *
+ * @example  Default (NiyoX cloud DB):
+ *   const store = new NiyoXStorage("alice");
+ *   await store.connect();
+ *
+ * @example  Your own MongoDB:
+ *   const store = new NiyoXStorage("alice", {
+ *     mongoUri: "mongodb+srv://user:pass@cluster.mongodb.net/",
+ *     dbName:   "my_app_db",
+ *   });
+ *   await store.connect();
  */
 class NiyoXStorage {
-  constructor(userId = "anonymous") {
-    this.userId  = userId;
-    this.enabled = false;
+  /**
+   * @param {string} userId  - Identifies the user; stored with every message.
+   * @param {object} options
+   * @param {string} [options.mongoUri]  - Custom MongoDB connection string.
+   * @param {string} [options.dbName]   - Database name (default: "niyox_npm").
+   */
+  constructor(userId = "anonymous", options = {}) {
+    this.userId   = userId;
+    this.mongoUri = options.mongoUri || DEFAULT_MONGO_URI;
+    this.dbName   = options.dbName   || DEFAULT_DB_NAME;
+    this.enabled  = false;
   }
 
-  /** Connect to MongoDB and enable storage */
-  async connect(userId) {
-    if (userId) this.userId = userId;
-    await getDb();         // will throw if it fails
+  /** @private */
+  _getDb() { return getDb(this.mongoUri, this.dbName); }
+
+  /**
+   * Connect to MongoDB and enable storage.
+   * @param {string} [userId]         - Override the userId set in the constructor.
+   * @param {string} [mongoUri]       - Override the connection string at connect-time.
+   * @param {string} [dbName]         - Override the database name at connect-time.
+   */
+  async connect(userId, mongoUri, dbName) {
+    if (userId)   this.userId   = userId;
+    if (mongoUri) this.mongoUri = mongoUri;
+    if (dbName)   this.dbName   = dbName;
+    await this._getDb();   // throws if connection fails
     this.enabled = true;
     return this;
   }
@@ -44,7 +88,7 @@ class NiyoXStorage {
   /** Save a single message turn */
   async saveMessage({ conversationId, role, content, responseTime = null }) {
     if (!this.enabled) return null;
-    const db   = await getDb();
+    const db   = await this._getDb();
     const coll = db.collection("messages");
     const doc  = {
       userId:         this.userId,
@@ -70,7 +114,7 @@ class NiyoXStorage {
   /** Retrieve all messages for a conversation */
   async getConversation(conversationId) {
     if (!this.enabled) return [];
-    const db = await getDb();
+    const db = await this._getDb();
     return db.collection("messages")
       .find({ conversationId, userId: this.userId })
       .sort({ createdAt: 1 })
@@ -80,7 +124,7 @@ class NiyoXStorage {
   /** List all conversation IDs for this user */
   async listConversations() {
     if (!this.enabled) return [];
-    const db = await getDb();
+    const db = await this._getDb();
     return db.collection("messages")
       .distinct("conversationId", { userId: this.userId });
   }
@@ -88,7 +132,7 @@ class NiyoXStorage {
   /** Delete a conversation */
   async deleteConversation(conversationId) {
     if (!this.enabled) return 0;
-    const db  = await getDb();
+    const db  = await this._getDb();
     const res = await db.collection("messages").deleteMany({ conversationId, userId: this.userId });
     return res.deletedCount;
   }
@@ -96,7 +140,7 @@ class NiyoXStorage {
   /** Save arbitrary key/value user preference */
   async setPref(key, value) {
     if (!this.enabled) return;
-    const db   = await getDb();
+    const db = await this._getDb();
     await db.collection("user_prefs").updateOne(
       { userId: this.userId, key },
       { $set: { value, updatedAt: new Date() } },
@@ -107,7 +151,7 @@ class NiyoXStorage {
   /** Get a user preference */
   async getPref(key, defaultValue = null) {
     if (!this.enabled) return defaultValue;
-    const db  = await getDb();
+    const db  = await this._getDb();
     const doc = await db.collection("user_prefs").findOne({ userId: this.userId, key });
     return doc ? doc.value : defaultValue;
   }
@@ -115,7 +159,7 @@ class NiyoXStorage {
   /** Usage statistics for this user */
   async getStats() {
     if (!this.enabled) return null;
-    const db   = await getDb();
+    const db   = await this._getDb();
     const coll = db.collection("messages");
     const [total, conversations, avgTime] = await Promise.all([
       coll.countDocuments({ userId: this.userId }),
@@ -132,7 +176,10 @@ class NiyoXStorage {
     };
   }
 
-  async disconnect() { await closeDb(); this.enabled = false; }
+  async disconnect() {
+    await closeDb(this.mongoUri, this.dbName);
+    this.enabled = false;
+  }
 }
 
-module.exports = { NiyoXStorage, getDb, closeDb };
+module.exports = { NiyoXStorage, getDb, closeDb, closeAllDb };
