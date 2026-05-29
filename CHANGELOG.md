@@ -15,6 +15,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
 
 ---
 
+## [0.0.3] — 2025-05-29
+
+### Removed
+- **Python SDK** (`python/niyox.py`, `setup.py`, `README_PYTHON.md`) — removed from the npm package; the Python SDK will be maintained as a separate PyPI project (`niyox-ai`)
+- `python/` directory removed from the `files` array in `package.json`
+- `"python"` keyword removed from `package.json`
+- All Python documentation, examples, and API reference removed from `README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, and `SECURITY.md`
+
+### Changed
+- `package.json` version bumped to `0.0.3`
+
+---
+
 ## [0.0.2] — 2025-05-29
 
 ### Added
@@ -26,14 +39,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
 - `closeAllDb()` helper exported for graceful shutdown of all open connections
 - `NiyoXAI` constructor forwards `mongoUri` / `dbName` options through to `NiyoXStorage`
 - `enableStorage(userId?, mongoUri?, dbName?)` accepts the same overrides
-
-#### Python SDK (`python/niyox.py`)
-- `NiyoXClient` — synchronous HTTP client, mirrors the JS API exactly
-- `NiyoXStorage` — optional MongoDB persistence layer (requires `pip install "niyox-ai[mongo]"`)
-- `NiyoXAI` — high-level class combining client + storage, with context manager support (`with NiyoXAI() as ai:`)
-- `AsyncNiyoXClient` / `AsyncNiyoXAI` — async variants using `aiohttp` (requires `pip install "niyox-ai[async]"`)
-- `setup.py` with `[mongo]`, `[async]`, and `[all]` extras
-- Zero hard dependencies — stdlib `urllib` only for sync usage
 
 #### React / Vite / Next.js (`react/useNiyoX.js`)
 - `useNiyoX(options?)` hook — returns `messages`, `input`, `setInput`, `sendMessage`, `isLoading`, `error`, `newConversation`, `conversationId`
@@ -58,7 +63,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
 - `exports` map extended with `"./react"` entry
 - `files` array extended to include `react/` and `examples/`
 - `peerDependencies` added for `react` / `react-dom` (both optional)
-- `keywords` extended with `react`, `nextjs`, `vite`, `python`, `mongodb`
+- `keywords` extended with `react`, `nextjs`, `vite`, `mongodb`
 - `SECURITY.md` — Known Considerations updated to reflect custom MongoDB URI feature
 
 ### Fixed
@@ -97,6 +102,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and
 
 ---
 
-[Unreleased]: https://github.com/dnuzi/niyox/compare/v0.0.2...HEAD
+[Unreleased]: https://github.com/dnuzi/niyox/compare/v0.0.3...HEAD
+[0.0.3]: https://github.com/dnuzi/niyox/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/dnuzi/niyox/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/dnuzi/niyox/releases/tag/v0.0.1
