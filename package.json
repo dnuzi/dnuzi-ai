@@ -36,7 +36,6 @@
     "react",
     "nextjs",
     "vite",
-    "python",
     "mongodb"
   ],
   "author": "DanuZz (@dnuzi)",
@@ -79,7 +78,6 @@
     "src/",
     "scripts/",
     "react/",
-    "python/",
     "html/",
     "examples/",
     "README.md"
