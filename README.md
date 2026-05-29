@@ -6,7 +6,7 @@
 
 <img src="https://img.shields.io/badge/npm-niyox-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=ff6b6b" alt="npm"/>
 &nbsp;
-<img src="https://img.shields.io/badge/version-0.0.2-000000?style=for-the-badge&labelColor=0d0d1a" alt="version"/>
+<img src="https://img.shields.io/badge/version-0.0.3-000000?style=for-the-badge&labelColor=0d0d1a" alt="version"/>
 &nbsp;
 <img src="https://img.shields.io/badge/license-MIT-000000?style=for-the-badge&labelColor=0d0d1a" alt="license"/>
 &nbsp;
@@ -64,7 +64,7 @@ The package ships four layers you can use independently:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
 
-## What's new in 0.0.2
+## What's new in 0.0.3
 
 | # | Change |
 |---|---|
@@ -73,6 +73,7 @@ The package ships four layers you can use independently:
 | 🔷 | **Next.js** — App Router example with Tailwind |
 | ⚡ | **Vite** — vanilla JS example |
 | 💻 | **CLI** — `/mongo <url>` and `/mongourl <url>` commands |
+| 🗑️ | **Python SDK removed** — now maintained separately as `niyox-ai` on PyPI |
 
 ---
 
