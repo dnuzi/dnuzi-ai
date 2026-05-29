@@ -219,6 +219,18 @@ console.log(r.result);    // → "Bob"
 ai.newConversation();     // reset thread + in-memory history
 ```
 
+### Low-level client (no storage)
+ 
+```js
+const { NiyoXClient } = require("niyox");
+ 
+const client = new NiyoXClient({ sessionId: "my-session", timeout: 15000 });
+const res = await client.chat("Hello!");
+ 
+console.log(res.result);
+console.log(client.getHistory());   // array of { role, content, timestamp }
+```
+ 
 ---
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"/>
