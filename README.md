@@ -4,15 +4,19 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/npm-niyox-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white" alt="npm"/>
+<img src="https://img.shields.io/badge/npm-niyox-a044ff?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=ff6b6b" alt="npm"/>
 &nbsp;
 <img src="https://img.shields.io/badge/version-0.0.2-00ffa3?style=for-the-badge&labelColor=0d0d1a" alt="version"/>
 &nbsp;
 <img src="https://img.shields.io/badge/license-MIT-00ffa3?style=for-the-badge&labelColor=0d0d1a" alt="license"/>
 &nbsp;
-<img src="https://img.shields.io/badge/node-%3E%3D18-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=node.js&logoColor=white" alt="node"/>
+<img src="https://img.shields.io/badge/node-%3E%3D18-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=node.js&logoColor=ffd93d" alt="node"/>
 &nbsp;
-<img src="https://img.shields.io/badge/CI-passing-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=github-actions&logoColor=white" alt="CI"/>
+<img src="https://img.shields.io/badge/CI-passing-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=github-actions&logoColor=00ffa3" alt="CI"/>
+
+<br/>
+
+[![npm downloads](https://img.shields.io/npm/dt/niyox?style=for-the-badge&label=total%20downloads&labelColor=0d0d1a&color=a044ff&logo=npm&logoColor=ff6b6b)](https://www.npmjs.com/package/niyox)
 
 <br/><br/>
 
@@ -31,9 +35,9 @@
 
 [![Live API](https://img.shields.io/badge/%F0%9F%8C%90_Live_API-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-niyox--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/niyox)
+[![GitHub](https://img.shields.io/badge/%E2%AD%90_Star_on_GitHub-niyox--ai-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=ffd93d)](https://github.com/dnuzi/niyox)
 &nbsp;
-[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_niyox-00ffa3?style=for-the-badge&labelColor=0d0d1a&logo=npm&logoColor=white)](https://npmjs.com/package/niyox)
+[![npm install](https://img.shields.io/badge/%F0%9F%93%A6_Install-npm_install_niyox-0d0d1a?style=for-the-badge&color=00ffa3&labelColor=1a1a2e&logo=npm&logoColor=ff6b6b)](https://npmjs.com/package/niyox)
 
 </div>
 
@@ -635,7 +639,7 @@ niyox/
 
 [![API](https://img.shields.io/badge/API_Endpoint-ai.dnuz.top-a044ff?style=for-the-badge&labelColor=0d0d1a)](https://ai.dnuz.top)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fniyox-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=white)](https://github.com/dnuzi/niyox)
+[![GitHub](https://img.shields.io/badge/GitHub-dnuzi%2Fniyox-ffd93d?style=for-the-badge&labelColor=0d0d1a&logo=github&logoColor=ffd93d)](https://github.com/dnuzi/niyox)
 
 <br/>
 
